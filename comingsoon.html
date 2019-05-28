@@ -65,8 +65,8 @@
               <div class="row justify-content-center">
                   <div class="col" style="text-align: center;">
                     <span>SIGN UP FOR LAUNCH </span>&nbsp;
-                    <input id="email_field" width="300" type="text" />&nbsp;
-                    <button onclick="submitEmail()" class="text-button">SEND</button>
+                    <input width="300" type="text" />&nbsp;
+                    <button class="text-button">SEND</button>
                   </div>
               </div>
             </div>
@@ -77,41 +77,5 @@
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-            <script type = "text/javascript">
-
-                 function submitEmail() {
-                  let email = document.getElementById('email_field').value
-                  let data = {
-                    "email_address" : email,
-                    "status": "subscribed",
-                      "status_if_new": "subscribed"
-                      }
-
-                  // let headers = new Headers()
-                  // headers.set('Authorization', 'Basic amtpbm1hbjo1N2MxYWM0NTNkYzAwZjkxNDRmZDU1NzRkNDRhY2ZhMi11czIw');
-                  console.log(email)
-                  fetch( './sendemail.php?email='+email )
-                    document.getElementById('email_field').value = ""
-
-                  // fetch("https://us20.api.mailchimp.com/3.0/lists/93c62bf4ab/members", {
-                  //   method: 'POST',
-                  //   mode: 'no-cors',
-                  //   // headers: {
-                  //   //   "Content-Type":"application/x-www-form-urlencoded",
-                  //   //   'Authorization': 'Basic amtpbm1hbjo1N2MxYWM0NTNkYzAwZjkxNDRmZDU1NzRkNDRhY2ZhMi11czIw',
-
-                  //   // },
-                  //   body: JSON.stringify(data)
-                  // })
-                  // .then((res) => {
-                  //   res.json().then(console.log)
-                  // })
-                  // .then(console.error)
-
-                 }
-
-           </script>     
-
     </body>
 </html>
